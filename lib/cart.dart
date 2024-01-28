@@ -37,7 +37,7 @@ class _cart extends State<cart> {
 
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.all(4.0),
+              padding: EdgeInsets.symmetric(horizontal:10.0 ,vertical: 5.0),
               child: cardContainr(
                // Image(image:Image.asset('photo/potato_fry.jpg')),
                 //Icon(Icons.credit_card, size: 45,), 
@@ -47,7 +47,7 @@ class _cart extends State<cart> {
                 "16 TK"),
               ),
               Padding(
-                padding: const EdgeInsets.all(4.0),
+                padding: const EdgeInsets.symmetric(horizontal:10.0 ,vertical: 5.0),
                 child: cardContainr(
                  'assets/images/burger.jpg',
                   "burger khaw", 
@@ -55,7 +55,7 @@ class _cart extends State<cart> {
                   "240 TK"),
               ),
               Padding(
-                padding: const EdgeInsets.all(4.0),
+                padding: const EdgeInsets.symmetric(horizontal:10.0 ,vertical: 5.0),
                 child: cardContainr(
                   'assets/images/donate.jpg',
                   "Donate choco", 
@@ -63,7 +63,7 @@ class _cart extends State<cart> {
                   "180 TK"),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:20.0),
+                padding: const EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 2.0) ,
                 //padding:EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
                   height: 110,
@@ -74,20 +74,25 @@ class _cart extends State<cart> {
                   ),
                   child: Column(
                     children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(3.0),
-                        child: Text("Order summary",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),
-                        ),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(15.0, 3.0, 5.0, 3.0),
+                            child: Text("Order summary",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
+                          )
+                        ]
+                        
+                        
                       ),
                       Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(3.0),
+                            padding: const EdgeInsets.fromLTRB(15.0, 3.0, 5.0, 3.0),
                             child: Text("product cost", style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left:100.0),
+                            padding: const EdgeInsets.only(left:200.0),
                             child: Text("470 TK ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),
                                                 ),
                           ),
@@ -97,12 +102,12 @@ class _cart extends State<cart> {
                       Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(3.0),
+                            padding: const EdgeInsets.fromLTRB(15.0, 3.0, 5.0, 3.0),
                             child: Text("Service charge", style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),
                                                 ),
                           ),
                         Padding(
-                          padding: const EdgeInsets.only(left:100.0),
+                          padding: const EdgeInsets.only(left:200.0),
                           child: Text("5 TK",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),
                           ),
                         ),
@@ -111,12 +116,12 @@ class _cart extends State<cart> {
                       Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(3.0),
+                            padding: const EdgeInsets.fromLTRB(15.0, 3.0, 5.0, 3.0),
                             child: Text("total",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),
                                                 ),
                           ),
                         Padding(
-                          padding: const EdgeInsets.only(left:160.0),
+                          padding: const EdgeInsets.only(left:260.0),
                           child: Text("475 TK", style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),
                           ),
                         ),
@@ -131,7 +136,7 @@ class _cart extends State<cart> {
               Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(2.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 1.0),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
@@ -158,33 +163,36 @@ class _cart extends State<cart> {
 
                           ),
                         ),
-                        Container(
-                          height: 50,
-                              width: 170,
-                              decoration: BoxDecoration(
-                                color: Colors.orange,
-                                borderRadius: BorderRadius.circular(25)
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 1.0),
+                          child: Container(
+                            height: 50,
+                                width: 170,
+                                decoration: BoxDecoration(
+                                  color: Colors.orange,
+                                  borderRadius: BorderRadius.circular(25)
+                                ),
+                                child: ElevatedButton(
+                                  child: const Text('pay cash'),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => const payment()),
+                                       );},
+                                       style: ElevatedButton.styleFrom(
+                                        backgroundColor: Colors.orange,
+                                       ),
+                                       //style: ButtonTheme()
+                                       ),
                               ),
-                              child: ElevatedButton(
-                                child: const Text('pay cash'),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => const payment()),
-                                     );},
-                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.orange,
-                                     ),
-                                     //style: ButtonTheme()
-                                     ),
-                            )
+                        )
                       ],
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.only(top:6.0),
+                      padding: const EdgeInsets.only(top:2.0),
                       child: Container(
-                        height: 70,
+                        height: 68,
                         width: 412,
                         //mainAxisAlignment:
                         
