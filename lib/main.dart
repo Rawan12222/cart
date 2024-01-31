@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_1/cart.dart';
+import 'package:flutter_application_1/cart2.dart';
 import 'package:flutter_application_1/payment.dart';
 import 'package:flutter_paystack/flutter_paystack.dart';
 import 'package:intl/intl.dart';
@@ -21,7 +22,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: cart()
+      home: 
+      cart2()
+      //cart()
       
       //payment()
       
