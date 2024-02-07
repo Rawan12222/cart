@@ -12,16 +12,16 @@ import 'package:flutter/material.dart';
 
 
 
-class cart2 extends StatefulWidget{
-  const cart2({super.key});
+class mobileCart extends StatefulWidget{
+  const mobileCart({super.key});
 
   @override
-  State<cart2> createState() => _cart2();
+  State<mobileCart> createState() => _mobileCart();
 
 }
 
 
-class _cart2 extends State<cart2> {
+class _mobileCart extends State<mobileCart> {
 
   int counter=0;
 

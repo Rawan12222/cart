@@ -3,6 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_application_1/cart.dart';
 import 'package:flutter_application_1/cart2.dart';
 import 'package:flutter_application_1/payment.dart';
+import 'package:flutter_application_1/responsive/mobileCart.dart';
+import 'package:flutter_application_1/responsive/responsive_layout.dart';
+import 'package:flutter_application_1/responsive/tabletCart.dart';
 import 'package:flutter_paystack/flutter_paystack.dart';
 import 'package:intl/intl.dart';
 
@@ -23,7 +26,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: 
-      cart2()
+      responsiveLayout(
+        mobileCartBody: mobileCart(),
+        tabletBody: tablet(),
+      )
+      //new_cart()
+      //cart2()
       //cart()
       
       //payment()

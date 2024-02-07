@@ -1,28 +1,23 @@
-
-import 'dart:core';
-
-import 'package:flutter_application_1/details.dart';
-import 'package:flutter_application_1/new_cart.dart';
-import 'package:flutter_application_1/orders_model.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_application_1/payment.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import 'package:flutter/material.dart';
+import '../details.dart';
+import '../new_cart.dart';
 
 
-
-class cart2 extends StatefulWidget{
-  const cart2({super.key});
+class tablet extends StatefulWidget{
+  const tablet({super.key});
 
   @override
-  State<cart2> createState() => _cart2();
+  State<tablet> createState() => _tablet();
 
 }
 
+class _tablet extends State<tablet>{
 
-class _cart2 extends State<cart2> {
 
+  
   int counter=0;
 
   void _incremeant(){
@@ -37,11 +32,9 @@ class _cart2 extends State<cart2> {
     });
   }
 
- 
-  @override
-  Widget build(BuildContext context){
-    final currentWidth = MediaQuery.of(context).size.width;
 
+  @override
+  Widget build (BuildContext context){
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -61,14 +54,11 @@ class _cart2 extends State<cart2> {
         ),
       ),
 
-      
-
-
-
       body: Container(
-
+        
         decoration: BoxDecoration(
-          color: Colors.orange.withOpacity(0.1),
+          
+          color: Colors.black.withOpacity(0.1),
           borderRadius: BorderRadius.circular(25)
         ),
         child: Column(
@@ -260,17 +250,14 @@ class _cart2 extends State<cart2> {
         ),
       ),
 
+
     );
-
-
-
-  }//build
-
+  }
 
   Container cardContainr( String image, String foodName, String quality, String money, ElevatedButton buttonAdd, ElevatedButton buttonminus){
     return Container(
       height: 100,
-      width: 380,
+      width:MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10)
@@ -344,7 +331,7 @@ class _cart2 extends State<cart2> {
   Container smallContainer(String txt, String num){
     return Container(
       height: 30,
-      width: 370,
+      width:MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(5)
@@ -364,3 +351,6 @@ class _cart2 extends State<cart2> {
     );
   }
 }
+
+
+

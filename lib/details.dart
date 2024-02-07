@@ -70,9 +70,6 @@ void _incrementCounter() {
             //productTiltle,
           style: TextStyle(fontSize: 24),),
             SizedBox(height: 5,),
-          // Text('products.description',
-          //   //productDescription,
-          // style: TextStyle(fontSize: 24),),
             Text(" السعر : ${widget.productPrice*_counter
               } ",
             style: TextStyle(color: Colors.greenAccent.withOpacity(0.7),
@@ -86,8 +83,6 @@ void _incrementCounter() {
         width: 280,
         height: 56,        
       child: Container(
-        //color: Colors.amber,
-        //backgroundcolor:Colors.blueAccent,
         decoration: BoxDecoration(
           color:Colors.amberAccent,
           borderRadius: BorderRadius.circular(15)),
@@ -109,16 +104,6 @@ void _incrementCounter() {
                 imagAssets: widget.imagAssets);
               }
             
-  //             addcartDetails(
-  //               products:products,
-  //               item:4,
-  //  );
-              
-            //  MyCartDetails(products: products, items: products.images.length);
-              // addnewrequest(
-
-              //   // productTiltle,productDescription,imagAssets,productPrice
-              // );
             },
             ),
       ),
