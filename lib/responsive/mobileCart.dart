@@ -69,7 +69,7 @@ class _mobileCart extends State<mobileCart> {
 
         decoration: BoxDecoration(
           color: Colors.orange.withOpacity(0.1),
-          borderRadius: BorderRadius.circular(25)
+          //borderRadius: BorderRadius.circular(25)
         ),
         child: Column(
           children: <Widget>[
@@ -270,7 +270,7 @@ class _mobileCart extends State<mobileCart> {
   Container cardContainr( String image, String foodName, String quality, String money, ElevatedButton buttonAdd, ElevatedButton buttonminus){
     return Container(
       height: 100,
-      width: 380,
+      width:MediaQuery.of(context).size.width-59,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10)
@@ -344,7 +344,7 @@ class _mobileCart extends State<mobileCart> {
   Container smallContainer(String txt, String num){
     return Container(
       height: 30,
-      width: 370,
+      width:MediaQuery.of(context).size.width-59,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(5)

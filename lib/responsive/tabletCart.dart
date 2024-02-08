@@ -59,7 +59,7 @@ class _tablet extends State<tablet>{
         decoration: BoxDecoration(
           
           color: Colors.black.withOpacity(0.1),
-          borderRadius: BorderRadius.circular(25)
+          //borderRadius: BorderRadius.circular(25)
         ),
         child: Column(
           children: <Widget>[
@@ -257,7 +257,7 @@ class _tablet extends State<tablet>{
   Container cardContainr( String image, String foodName, String quality, String money, ElevatedButton buttonAdd, ElevatedButton buttonminus){
     return Container(
       height: 100,
-      width:MediaQuery.of(context).size.width,
+      width:MediaQuery.of(context).size.width-59,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10)
@@ -331,7 +331,7 @@ class _tablet extends State<tablet>{
   Container smallContainer(String txt, String num){
     return Container(
       height: 30,
-      width:MediaQuery.of(context).size.width,
+      width:MediaQuery.of(context).size.width-59,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(5)
